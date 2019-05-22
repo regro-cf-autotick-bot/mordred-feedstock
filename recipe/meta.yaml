@@ -11,18 +11,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1 
   script: "{{ PYTHON }} -m pip install . --no-deps -vv "
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6,<3.7.0a0
   run:
-    - enum34
     - networkx
     - numpy
-    - python
+    - python >=3.6,<3.7.0a0
     - rdkit
     - six
     - tqdm 4.*
