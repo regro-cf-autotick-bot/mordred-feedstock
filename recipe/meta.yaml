@@ -1,5 +1,5 @@
 {% set name = "mordred" %}
-{% set version = "1.1.2" %}
+{% set version = "1.2.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 690be59ce10f71dc36c6cc732bbd98934671a00fa1f662d3ae6f87043d938a86
+  sha256: 1115f9f3a3dde290dd68d51a5070fce43a62aab96b980cffc9d72b74a59e1c5a
 
 build:
   noarch: python
-  number: 1 
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv "
 
 requirements:
